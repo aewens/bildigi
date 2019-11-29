@@ -1,0 +1,116 @@
+:root {
+    --darker-color: #002b36;
+    --dark-color: #073642;
+    --content-darker-color: #586e75;
+    --content-dark-color: #657b83;
+    --content-light-color: #839496;
+    --content-lighter-color: #93a1a1;
+    --light-color: #eee8d5;
+    --lighter-color: #fdf6e3;
+    --yellow-color: #b58900;
+    --orange-color: #cb4b16;
+    --red-color: #dc322f;
+    --magenta-color: #d33682;
+    --violet-color: #6c71c4;
+    --blue-color: #268bd2;
+    --cyan-color: #2aa198;
+    --green-color: #859900;
+}
+
+.darker {
+    color: var(--darker-color);
+}
+.dark {
+    color: var(--dark-color);
+}
+.content-darker {
+    color: var(--content-darker-color);
+}
+.content-dark {
+    color: var(--content-dark-color);
+}
+.content-light {
+    color: var(--content-light-color);
+}
+.content-lighter {
+    color: var(--content-lighter-color);
+}
+.light {
+    color: var(--light-color);
+}
+.lighter {
+    color: var(--lighter-color);
+}
+.yellow {
+    color: var(--yellow-color);
+}
+.orange {
+    color: var(--orange-color);
+}
+.red {
+    color: var(--red-color);
+}
+.magenta {
+    color: var(--magenta-color);
+}
+.violet {
+    color: var(--violet-color);
+}
+.blue {
+    color: var(--blue-color);
+}
+.cyan {
+    color: var(--cyan-color);
+}
+.green {
+    color: var(--green-color);
+}
+
+.darker-bg {
+    background-color: var(--darker-color);
+}
+.dark-bg {
+    background-color: var(--dark-color);
+}
+.content-darker-bg {
+    background-color: var(--content-darker-color);
+}
+.content-dark-bg {
+    background-color: var(--content-dark-color);
+}
+.content-light-bg {
+    background-color: var(--content-light-color);
+}
+.content-lighter-bg {
+    background-color: var(--content-lighter-color);
+}
+.light-bg {
+    background-color: var(--light-color);
+}
+.lighter-bg {
+    background-color: var(--lighter-color);
+}
+.yellow-bg {
+    background-color: var(--yellow-color);
+}
+.orange-bg {
+    background-color: var(--orange-color);
+}
+.red-bg {
+    background-color: var(--red-color);
+}
+.magenta-bg {
+    background-color: var(--magenta-color);
+}
+.violet-bg {
+    background-color: var(--violet-color);
+}
+.blue-bg {
+    background-color: var(--blue-color);
+}
+.cyan-bg {
+    background-color: var(--cyan-color);
+}
+.green-bg {
+    background-color: var(--green-color);
+}
