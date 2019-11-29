@@ -16,10 +16,23 @@ const Demo = () => {
     }
 
     const resizeCanvas = (elem) => {
-        elem.style.width = "100%";
-        elem.style.height = "100%";
-        elem.width = elem.offsetWidth;
-        elem.height = elem.offsetHeight;
+        const container = elem.parentNode;
+        console.log(container, container.offsetWidth, container.offsetHeight);
+        if (container.offsetWidth > container.offsetHeight) {
+            const width = container.offsetHeight * 4 / 3;
+            const height = container.offsetHeight;
+            elem.style.width = `${width}px`;
+            elem.style.height = `${height}px`;
+            elem.width = elem.offsetWidth;
+            elem.height = elem.offsetHeight;
+        } else {
+            const width = container.offsetWidth;
+            const height = container.offsetWidth * 3 / 4;
+            elem.style.width = `${width}px`;
+            elem.style.height = `${height}px`;
+            elem.width = elem.offsetWidth;
+            elem.height = elem.offsetHeight;
+        }
     }
 
     const clearCanvas = (ctx) => {

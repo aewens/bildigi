@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import Demo from "./Demo";
 //import Posts from "./Posts";
+import { useStore } from "./store";
 
 const MainPanel = () => {
+    const [store, dispatch] = useStore();
+
     return (
         <main className="MainPanel">
-            <Demo />
+        {store.pages.map((page, index) => {
+            if (page.active) {
+                const Page = page.page;
+                return (
+                    <Page key={index} />
+                );
+            }
+        })}
         </main>
     );
 }
