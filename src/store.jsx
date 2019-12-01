@@ -1,12 +1,14 @@
 import React, { createContext, useContext, useReducer } from "react";
 import Dashboard from "./Dashboard";
 import Demo from "./Demo";
+import Derivide from "./Derivide";
 //import rootReducer from "./reducers";
 
 const initialState = {
     "pages": [
-        { "name": "Dashboard", "active": true, "page": Dashboard },
+        { "name": "Dashboard", "active": false, "page": Dashboard },
         { "name": "Demo", "active": false, "page": Demo },
+        { "name": "Derivide", "active": true, "page": Derivide },
     ]
 };
 
