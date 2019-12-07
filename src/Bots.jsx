@@ -10,6 +10,7 @@ const useFetch = url => {
     }
 
     useEffect(() => {
+        fetchData(); // NOTE - run immediately at first
         const interval = setInterval(fetchData, 1000 * 10);
         return () => clearInterval(interval);
     }, [url]);
