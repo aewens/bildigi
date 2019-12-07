@@ -1,28 +1,28 @@
 import React, { createContext, useContext, useReducer } from "react";
 import Dashboard from "./Dashboard";
-import Demo from "./Demo";
+import Canvas from "./Canvas";
 import Derivide from "./Derivide";
+import Bots from "./Bots";
 //import rootReducer from "./reducers";
 
 const initialState = {
-    "pages": [
-        { "name": "Dashboard", "active": false, "page": Dashboard },
-        { "name": "Demo", "active": false, "page": Demo },
-        { "name": "Derivide", "active": true, "page": Derivide },
+    active_page: "Bots",
+    pages: [
+        { name: "Dashboard", page: Dashboard },
+        { name: "Canvas", page: Canvas },
+        { name: "Derivide", page: Derivide },
+        { name: "Bots", page: Bots },
+    ],
+    sidebars: [
+        { name: "Graphs", active: true, page: "Dashboard" },
+        { name: "Babili", active: true, page: "Bots" },
     ]
 };
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
     case "PAGE_ACTIVE":
-        const newPages = [...state.pages];
-        const index = action.payload;
-        newPages.map(tab => {
-            tab.active = false;
-            return tab;
-        });
-        newPages[index].active = true;
-        return {...state, pages: newPages};
+        return {...state, active_page: action.payload};
     default:
         return state;
     }

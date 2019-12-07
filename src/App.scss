@@ -93,6 +93,7 @@ body {
         padding: 0.5rem;
         margin-top: 0;
         margin-left: 0.5rem;
+        text-align: center;
         &:first-child {
             margin-left: 0;
         }
@@ -144,7 +145,7 @@ body {
     }
 }
 
-.Demo {
+.Canvas {
     position: relative;
     width: 100%;
     height: 100%;
@@ -153,6 +154,25 @@ body {
     canvas {
         cursor: pointer;
         background: #000;
+    }
+}
+
+.Bots {
+    padding: 1em;
+    .BotMessage {
+        padding: 1em;
+        background: var(--darker-color);
+        color: var(--yellow-color);
+        word-break: break-word;
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
+        ul {
+            padding-left: 1em;
+            li {
+                list-style-type: disc;
+            }
+        }
     }
 }
 

@@ -8,7 +8,7 @@ const MainPanel = () => {
     return (
         <main className="MainPanel">
         {store.pages.map((page, index) => {
-            if (page.active) {
+            if (page.name == store.active_page) {
                 const Page = page.page;
                 return (
                     <Page key={index} />

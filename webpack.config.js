@@ -1,5 +1,6 @@
 const path = require("path");
-//const HtmlWebpackPlugin = require("html-webpack-plugin");
+const dev = process.env.NODE_ENV !== "production";
+
 module.exports = {
     entry: path.resolve(__dirname, "src/index.jsx"),
     output: {
@@ -9,6 +10,7 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx", ".css"]
     },
+    devtool: dev ? "eval-cheap-module-source-map" : "inline-cheap-module-source-map",
     module: {
         rules: [
             {

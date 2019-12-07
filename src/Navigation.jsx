@@ -5,8 +5,8 @@ import { useStore } from "./store";
 const Navigation = () => {
     const [store, dispatch] = useStore();
 
-    const changePage = (index) => {
-        dispatch({type: "PAGE_ACTIVE", payload: index});
+    const changePage = (name) => {
+        dispatch({type: "PAGE_ACTIVE", payload: name});
     }
 
     return (
@@ -15,7 +15,7 @@ const Navigation = () => {
             <Tab
                 key={index}
                 index={index}
-                onClick={e => changePage(index)}/>
+                onClick={e => changePage(page.name)}/>
         ))}
         </ul>
     );

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
 
-const Demo = () => {
+const Canvas = () => {
     const [points, setPoints] = useState([]);
     const [active, setActive] = useState(false);
 
@@ -76,7 +76,7 @@ const Demo = () => {
     });
 
     return (
-        <div className="Demo">
+        <div className="Canvas">
             <canvas
                 className="bildigi"
                 ref={canvasRef}
@@ -88,4 +88,4 @@ const Demo = () => {
     );
 }
 
-export default Demo;
+export default Canvas;

@@ -1,12 +1,22 @@
 import React, { useState } from "react";
+import { useStore } from "./store";
 
 const Sidebar = () => {
+    const [state, dispatch] = useStore();
+
     return (
         <aside className="Sidebar">
-            <div className="Entry">Entry 1</div>
-            <div className="Entry">Entry 2</div>
-            <div className="Entry">Entry 3</div>
-            <div className="Entry">Entry 4</div>
+        {state.sidebars.map((entry, index) => {
+            if (entry.page == state.active_page) {
+                return (
+                    <div className="Entry"
+                        key={index}
+                        index={index}>
+                        {entry.name}
+                    </div>
+                );
+            }
+        })}
         </aside>
     );
 }
